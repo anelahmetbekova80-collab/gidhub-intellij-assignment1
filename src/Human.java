@@ -1,39 +1,37 @@
-public class Human {
-    private int age;
-    private String name;
-    private boolean aituStudent;
+public abstract class Human {
+    protected int age;
+    protected String name;
+    protected boolean isAituStudent;
 
-    public Human(int age, String name, boolean aituStudent){
-        this.age=age;
-        this.name=name;
-        this.aituStudent=aituStudent;
+    public Human(int age, String name, boolean isAituStudent){
+        this.age = age;
+        this.name = name;
+        this.isAituStudent = isAituStudent;
     }
+    public abstract void doSomething();
+    public void yourName(){
+        System.out.println("hello my name is " + name);
+    }
+    public void itUni(){
+        System.out.println("famous IT uni in Astana is AITU");
+    }
+
     public int getAge() {
         return age;
     }
     public void setAge(int age){
-        this.age=age;
+        this.age = age;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
-    public boolean aituStudent() {
-        return aituStudent;
+    public boolean isAituStudent() {
+        return isAituStudent;
     }
-
-    public void aituStudent(boolean aituStudent) {
-        this.aituStudent = aituStudent;
-    }
-    public void yourName(){
-        System.out.println("hello my name is " +name);
-    }
-    public void ITuni(){
-        System.out.println("famous IT uni in AStana is AITU");
+    public void setAituStudent(boolean isAituStudent) {
+        this.isAituStudent = isAituStudent;
     }
 }
